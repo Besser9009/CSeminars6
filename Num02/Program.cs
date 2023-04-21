@@ -14,7 +14,8 @@
 // int[] array = NewArray();
 // System.Console.WriteLine($"[{String.Join(", ", array)}]");
 Console.Write("Введите три числа (через запятую): ");
-int[] array = Console.ReadLine().Split(',').Select(num => int.Parse(num)).ToArray();
+int[] array = Console.ReadLine().Split(' ').Select(num => int.Parse(num)).ToArray();
+System.Console.WriteLine($"[{String.Join(", ", array)}]");
 void Triangle(int[] array)
 {
     string msg = (array[0] < array[1] + array[2] && array[1] < array[0] + array[2] && array[2] < array[1] + array[0]) ? "Yes, it's triangle" : "No... It's not triangle";
